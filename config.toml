@@ -1,0 +1,27 @@
+baseurl = "http://jossemargt.com"
+languageCode = "es-es"
+title = "JossemarGT"
+theme = "beautifulhugo"
+pygmentsUseClasses = true
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
+
+[Params]
+  subtitle = "# tail -f /var/log/thoughts.log"
+
+[Author]
+  name = "Jossemar Cordero"
+  email = "jossemargt@gmail.com"
+  github = "jossemargt"
+  twitter = "jossemargt"
+  linkedin = "in/jossemargt"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Acerca de Mi"
+    url = "/page/about/"
+    weight = 2
