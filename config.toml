@@ -1,4 +1,4 @@
-baseurl = "http://jossemargt.com"
+baseurl = "http://jossemargt.com/"
 languageCode = "es-es"
 title = "JossemarGT"
 theme = "beautifulhugo"
