@@ -2,16 +2,18 @@ baseurl = "http://jossemargt.com/"
 languageCode = "es-es"
 title = "JossemarGT"
 theme = "beautifulhugo"
+
+# Theme configs
 pygmentsUseClasses = true
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+url = "http://jossemargt.com/"
+#disqusShortname = "ENV_DISQUS"
+#googleAnalytics = "ENV_ANALYTICS"
 
 [Params]
   subtitle = "# tail -f /var/log/thoughts.log"
 
 [Author]
   name = "Jossemar Cordero"
-  email = "jossemargt@gmail.com"
   github = "jossemargt"
   twitter = "jossemargt"
   linkedin = "in/jossemargt"
