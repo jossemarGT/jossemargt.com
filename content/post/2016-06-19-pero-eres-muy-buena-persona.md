@@ -1,8 +1,8 @@
 ---
 
-date: "2016-06-19T20:00:00-06:00"
-title: "Pero eres muy buena persona"
-subtitle: "Cuando una virtud se toma por defecto"
+date: 2016-06-19
+title: Pero eres muy buena persona
+subtitle: Cuando una virtud se toma por defecto
 
 ---
 <!--more-->
@@ -29,7 +29,7 @@ indiferencia.
 
 Aunque es difícil encontrar el equilibrio entre ayudar a otros y que se
 aprovechen de ti, prefiero tomar el riesgo y dar lo mejor de mí, porque al final
-todos necesitamos de alguien más en esta vida.  
+todos necesitamos de alguien más en esta vida.
 
 [0] No tengo la menor idea quien lo dijo primero, pero esa frase pasó ser parte
 de mi vida.
