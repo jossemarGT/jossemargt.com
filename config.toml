@@ -41,3 +41,7 @@ enableGitInfo = true
 [[languages.es.menu.main]]
 name = "Acerca de Mi"
 url = "page/acerca-de-mi/"
+
+[[languages.en.menu.main]]
+name = "About"
+url = "page/about/"
