@@ -8,6 +8,12 @@ DefaultContentLanguage = "es"
 title = "JossemarGT"
 theme = "beautifulhugo"
 
+[languages]
+  [languages.es]
+    contentDir = "content/es"
+  [languages.en]
+    contentDir = "content/en"
+
 [Author]
   name = "Jossemar Cordero"
   github = "jossemargt"
@@ -31,12 +37,7 @@ enableGitInfo = true
 #---------------
 # Fixed pages
 #---------------
-[[menu.main]]
-    name = "Blog"
-    url = ""
-    weight = 1
 
-[[menu.main]]
-    name = "Acerca de Mi"
-    url = "page/about/"
-    weight = 2
+[[languages.es.menu.main]]
+name = "Acerca de Mi"
+url = "page/acerca-de-mi/"
