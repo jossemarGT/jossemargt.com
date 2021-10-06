@@ -4,9 +4,10 @@
 
 baseurl = "http://jossemargt.com"
 url = "http://jossemargt.com"
-DefaultContentLanguage = "es"
 title = "JossemarGT"
-theme = "beautifulhugo"
+theme = "diary"
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir= true
 
 [languages]
   [languages.es]
@@ -40,8 +41,16 @@ enableGitInfo = true
 
 [[languages.es.menu.main]]
 name = "Acerca de Mi"
-url = "page/about/"
+url = "/es/page/about/"
+
+[[languages.es.menu.main]]
+name = "English"
+url = "/en/"
 
 [[languages.en.menu.main]]
-name = "About"
-url = "page/about/"
+name = "About me"
+url = "/en/page/about/"
+
+[[languages.en.menu.main]]
+name = "Español"
+url = "/es/"
