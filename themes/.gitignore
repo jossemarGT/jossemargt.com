@@ -1,3 +1,4 @@
 # The Hugo Theme will be provisioned on deployment
 # https://github.com/AmazingRise/hugo-theme-diary.git diary
+*
 !.gitignore

@@ -62,5 +62,4 @@ I hope you find this post helpful either on the JFrog pointers or the
 pseudo-RCA.
 
 By the way, if you are in charge of a productive service that goes south,
-remember "keep calm and continue pushing forward". We have been there and it
-happens #hugops.
+remember "keep calm and push forward". We have been there and it happens #hugops.
