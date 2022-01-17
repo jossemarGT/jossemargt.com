@@ -1,7 +1,7 @@
 ---
 
 date: 2021-10-06
-title: 'Artifactory yum repolists metadata troubleshoot'
+title: 'Pseudo-RCA: Artifactory yum repolists post-upgrade issue'
 
 ---
 
@@ -20,7 +20,7 @@ ignore the following aspects of an RCA:
 Please bear that in mind if you would like to use this post as a guide for some
 reason.
 
-## Artifactory yum errors - Informal RCA
+## Artifactory yum errors - Pseudo-RCA
 
 ### Issue
 
