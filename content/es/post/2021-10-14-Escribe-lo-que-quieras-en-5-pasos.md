@@ -5,6 +5,7 @@ title: Escribe lo que quieras en 5 pasos
 subtitle: No es tan complicado como parece
 
 ---
+
 <!--more-->
 
 Muchas veces escribir en un medio formal inspira estrés, miedo, o un gran estado

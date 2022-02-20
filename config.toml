@@ -40,12 +40,22 @@ enableGitInfo = true
 #---------------
 
 [[languages.es.menu.main]]
+name = "Inicio"
+url = "/es/"
+weight = 10
+
+[[languages.es.menu.main]]
 name = "Acerca de Mi"
 url = "/es/page/about/"
 
 [[languages.es.menu.main]]
 name = "English"
 url = "/en/"
+
+[[languages.en.menu.main]]
+name = "Home"
+url = "/en/"
+weight = 10
 
 [[languages.en.menu.main]]
 name = "About me"
