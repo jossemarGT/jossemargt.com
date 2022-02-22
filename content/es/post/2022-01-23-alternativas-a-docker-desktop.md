@@ -10,7 +10,7 @@ tags: ['tech']
 
 El tema del cambio del licenciamiento sobre productos y services de Docker Inc.
 se ha discutido en varias publicaciones, sin embargo es muy poco lo que se
-encuentra Español. Por ello hoy quiero compartirte que significa este cambio
+encuentra en Español. Por ello hoy quiero compartirte que significa este cambio
 para los usuarios y alternativas a uno de sus productos, Docker Desktop, existen
 en caso quieras explorarlas.
 
@@ -51,9 +51,9 @@ pueden optar por la suscripción gratuita sin ningún problema.
 
 ## Alternativas a Docker Desktop
 
-Docker Desktop sigue siendo una gran solución productividad de desarrolladores,
-aún así no está de más conocer las alternativas existentes en caso quieras
-migrar.
+Docker Desktop sigue siendo una gran solución para la productividad de
+desarrolladores, aún así no está de más conocer las alternativas existentes en
+caso quieras migrar.
 
 Aclaro que para manterner la publicación breve me limitaré a dar un pequeña
 descripción de cada alternativa y compartir donde puedes leer más acerca de
@@ -75,20 +75,33 @@ gráfica, esta es tu mejor opción.
 
 <https://minikube.sigs.k8s.io/>
 
-Minikube es una herramienta código abierto, mantenida la comunidad de Kubernetes
-sigs, que permite a nuevos usuarios y desarrollores crear ambientes con
-Kubernetes localmente desde un CLI.
+Minikube es una herramienta código abierto, mantenida por la comunidad de
+Kubernetes sigs, que permite a nuevos usuarios y desarrollores crear ambientes
+con Kubernetes localmente desde un CLI.
 
 Si buscas crear ambientes que sean compatibles con el docker CLI sin tener que
-levantar Kubernetes, esta es una buena alteratniva. Solamente necesitas agregar
+levantar Kubernetes, esta es una buena alternativa. Solamente necesitas agregar
 `--no-kubernetes` al comando `minikube start`.
+
+### podman machine
+
+<https://podman.io/>
+
+Podman es la alternativa open source, soportada por Red Hat, que trae la audáz
+propuesta de ser un reemplazo de Docker para el manejo de contenedores. Entre
+los subcomandos del podman CLI está `podman machine`, el cual se encarga de
+gestionar las configuraciones de un ambiente virtual para correr contenedores en
+sistemas operativos no basados en GNU Linux.
+
+La transición de `docker` a `podman` es tan sencilla como hacer
+`alias docker=podman`, hanciendola una opción bastante favorable.
 
 ### lima
 
 <https://github.com/lima-vm/lima>
 
 Lima la opción código abierto no oficial de `containerd` para ambientes macOS,
-gestionando varias configuraciones nativas por defecto desde un CLI (`limactl`).
+gestionando varias configuraciones nativas por defecto desde un CLI `limactl`.
 
 En caso ya estes trabajando con ambientes productivos de Kubernetes que usan
 `containerd` en lugar de `docker-shim`, esta solución te permitirá tener un
@@ -104,14 +117,14 @@ Docker CLI por tu propia cuenta. Ya sea
 
 Estas soluciones suelen ser bastante interesantes. Sin embargo, para
 productividad de equipos de desarrollo no suele ser la mejor opción dado que
-traen consigo una curva pronuncidad de aprendizaje para cada uno de los
+traen consigo una curva de aprendizaje pronunciada para cada uno de los
 integrates del equipo.
 
 ## Conclusión
 
-La empresa que provee los servicios de Docker ha cambiado su sistema
+La empresa que provee los servicios de Docker ha cambiado su sistema de
 licenciamiento y esquema de cobros. Para muchos en America Latina el cambio no
 implica más que crear una cuenta personal en [docker.com](https://docker.com) y
-seguir disfurtando de ellos de manera gratuita. Aún así, no está de más conocer
-que alternativas a Docker Desktop, en caso que tu o el equipo donde trabajas se
-vean en a necesidad de migrar.
+seguir disfurtando de sus servicios y productos de manera gratuita. Aún así, no
+está de más conocer que alternativas a Docker Desktop, en caso que tu o el
+equipo donde trabajas se vean en la necesidad de migrar.
