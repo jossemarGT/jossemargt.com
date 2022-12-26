@@ -1,14 +1,15 @@
 ---
 
 date: 2022-08-21
-title: "My DMARC d'ohs"
+title: "DMARC d'ohs"
 
 ---
 
 <!--more-->
 
-This entry will be more informal since I want to share what I have learned about
-DMARC so far, with stumbles and all.
+As you can expect from the title, this entry will be an informal way of
+presenting my learnings about DMARC, including some stumbles I got along the
+way.
 
 ## What is DMARC?
 
