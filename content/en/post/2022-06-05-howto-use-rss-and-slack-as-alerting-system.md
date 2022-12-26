@@ -31,9 +31,9 @@ incidents through RSS. However, this approach also works with several PaaS (ie,
 2. Get the RSS URL for the system you want to be alerted to.
     - GCP only has the [Cloud status page](https://status.cloud.google.com/) (You'll find the RSS link in the footer)
     - AWS offers a more granular RSS per service per region, and these can be found within the [AWS Health Dashboard](https://health.aws.amazon.com/health/status)
-3. Configure the Slack RSS application to post every RSS update on a specific channel. 
+3. Configure the Slack RSS application to post every RSS update on a specific channel.
     - I suggest having an independent channel since these notifications are pretty noisy.
-4. You are set. 
+4. You are set.
 
 Now you have a slack channel with the most recent update from your cloud
 provider or third-party integration without spending any extra penny.
