@@ -20,7 +20,6 @@ a cloud provider or third-party integration has availability problems. Still, I
 can share an inexpensive way to reduce the guesswork next time it happens as
 long they publish their incidents via RSS.
 
-
 ## Step-by-step
 
 In this example, we'll focus on how to set up Slack to notify AWS or GCP
