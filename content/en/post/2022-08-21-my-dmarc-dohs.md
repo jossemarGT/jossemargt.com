@@ -2,6 +2,7 @@
 
 date: 2022-08-21
 title: "DMARC d'ohs"
+tags: ['learnings']
 
 ---
 
