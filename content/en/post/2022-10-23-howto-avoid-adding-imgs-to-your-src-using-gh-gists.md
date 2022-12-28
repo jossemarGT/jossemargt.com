@@ -2,6 +2,7 @@
 
 date: 2022-10-23
 title: "HowTo: Avoid adding images to your source code with GH gists"
+tags: ['hack']
 
 ---
 
