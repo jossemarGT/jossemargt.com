@@ -1,0 +1,3 @@
+[registry]
+  [registry."jossemargt-xps-8300.lan:5000"]
+    http = true
