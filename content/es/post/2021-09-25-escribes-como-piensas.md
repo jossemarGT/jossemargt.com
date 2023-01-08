@@ -3,6 +3,7 @@
 date: 2021-09-25
 title: Escribes como piensas
 subtitle: Creando el hábito de escribir
+tags: ['thoughts']
 
 ---
 <!--more-->

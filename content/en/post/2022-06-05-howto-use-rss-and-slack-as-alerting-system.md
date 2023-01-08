@@ -2,6 +2,7 @@
 
 date: 2022-06-05
 title: 'HowTo: Use RSS and Slack as low cost alert system for third-parties'
+tags: ['slack']
 
 ---
 

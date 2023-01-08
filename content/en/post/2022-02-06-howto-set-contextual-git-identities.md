@@ -2,6 +2,7 @@
 
 date: 2022-02-06
 title: 'HowTo: Set contextual git identities'
+tags: ['git', 'github']
 
 ---
 

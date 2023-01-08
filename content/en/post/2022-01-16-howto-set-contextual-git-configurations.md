@@ -2,6 +2,7 @@
 
 date: 2022-01-16
 title: 'HowTo: Set contextual git configurations'
+tags: ['git']
 
 ---
 
