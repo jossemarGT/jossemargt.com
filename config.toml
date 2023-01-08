@@ -23,8 +23,8 @@ DefaultContentLanguageInSubdir= true
 [Params]
   subtitle = "# tail -f /var/log/thoughts.log"
   commit = "https://github.com/jossemarGT/jossemargt.com/tree/"
-  mainSections = ["post","posts"]
-  dateFormat = "2006-01-2"
+  mainSections = ["post", "posts"]
+  dateFormat = "2006-01-20"
   comments = false
   hideAuthor = true
 
@@ -34,6 +34,14 @@ DefaultContentLanguageInSubdir= true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 enableGitInfo = true
+
+#---------------
+# Social media
+#---------------
+enableOpenGraph = true
+enableTwitterCards = true
+title = "JossemarGT"
+description = "# tail -f /var/log/thoughts.log"
 
 #---------------
 # Fixed pages
