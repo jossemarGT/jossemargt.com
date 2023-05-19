@@ -1,7 +1,7 @@
 ---
 
 date: 2023-01-23
-title: 'Generate reports of AWS DB clusters with the AWS CLI'
+title: 'Generate AWS RDS inventories using the AWS CLI'
 tags: ['snippet']
 
 ---
