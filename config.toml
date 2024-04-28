@@ -15,16 +15,17 @@ DefaultContentLanguageInSubdir= true
   [languages.en]
     contentDir = "content/en"
 
-[Author]
+[author]
   name = "Jossemar Cordero"
   github = "jossemargt"
   linkedin = "in/jossemargt"
 
-[Params]
+[params]
   subtitle = "# tail -f /var/log/thoughts.log"
   commit = "https://github.com/jossemarGT/jossemargt.com/tree/"
   mainSections = ["post", "posts"]
-  dateFormat = "2006-01-20"
+  dateFormat = "2006-01-02"
+  enableAutoDarkMode = true
   comments = false
   hideAuthor = true
 
@@ -43,9 +44,9 @@ enableTwitterCards = true
 title = "JossemarGT"
 description = "# tail -f /var/log/thoughts.log"
 
-#---------------
-# Fixed pages
-#---------------
+#------------------
+# Fixed menu items
+#------------------
 
 [[languages.es.menu.main]]
 name = "Inicio"

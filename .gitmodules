@@ -1,6 +1,4 @@
-[submodule "themes/beautifulhugo"]
-	path = themes/beautifulhugo
-	url = https://github.com/halogenica/beautifulhugo.git
-[submodule "themes/diary"]
+[submodule "diary"]
 	path = themes/diary
 	url = https://github.com/AmazingRise/hugo-theme-diary.git
+	shallow = true
