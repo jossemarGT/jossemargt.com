@@ -6,12 +6,12 @@ tags: ['snippet']
 
 ---
 
-<!--more-->
+Picture this: you received a notification from AWS regarding upgrading a few
+databases in the upcoming maintenance window. However, the DBA is on PTO, and
+you need to share this information with up the chain of command in a
+spreadsheet. What do you do?
 
-Let's say you got a notification from AWS saying that "a couple" of databases
-will be upgraded in the upcoming maintenance window. The DBA is on PTO, and you
-need to share this information more accurately up the chain of command, ideally
-as a spreadsheet.
+<!--more-->
 
 In case you already know the AWS account and the region affected, then it would
 be as simple as doing the following:
