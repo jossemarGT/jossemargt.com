@@ -2,8 +2,8 @@
 # Site metadata
 #-------------------
 
-baseurl = "http://jossemargt.com"
-url = "http://jossemargt.com"
+baseurl = "https://jossemargt.com"
+url = "https://jossemargt.com"
 title = "JossemarGT"
 theme = "diary"
 DefaultContentLanguage = "en"
@@ -21,7 +21,7 @@ DefaultContentLanguageInSubdir= true
   linkedin = "in/jossemargt"
 
 [params]
-  subtitle = "# tail -f /var/log/thoughts.log"
+  subtitle = "# tar -xzf /var/log/thoughts.log.0.gz"
   commit = "https://github.com/jossemarGT/jossemargt.com/tree/"
   mainSections = ["post", "posts"]
   dateFormat = "2006-01-02"
@@ -73,3 +73,9 @@ url = "/en/page/about/"
 [[languages.en.menu.main]]
 name = "Español"
 url = "/es/"
+
+#-------------------------------
+# og:image generation font tweak
+#-------------------------------
+[security.http]
+mediaTypes = ['^font/woff2$']
