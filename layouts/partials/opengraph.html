@@ -36,8 +36,8 @@
 {{- end }}
 
 {{- /* og:image override */ -}}
-{{- $image := resources.Get "images/og-bg.png" }}
-{{- $image := $image.Process "fill 1200x400" }}
+{{- $bg := resources.Get "images/og-bg.png" }}
+{{- $image := $bg.Process "fill 1200x630" }}
 {{- $font := "" }}
 {{- $path := "https://github.com/google/fonts/raw/main/ofl/kodemono/KodeMono%5Bwght%5D.ttf" }}
 {{- with resources.GetRemote $path }}
@@ -48,18 +48,38 @@
   {{- end }}
 {{- else }}
   {{- errorf "Unable to get resource %q" $path }}
-{{- end }}
+{{- end -}}
+
 {{- $opts := dict
   "color" "#93a1a1"
   "font" $font
-  "size" 30
-  "x" 10
-  "y" 10
+  "size" 50
+  "x" 20
+  "y" 20
 }}
-{{- $text := "# tar -xzf /var/log/thoughts.log.0.gz | tail -1" }}
-{{- $filter := images.Text $text $opts }}
+{{- $filter := images.Text .Site.Params.subtitle $opts }}
 {{- with $image | images.Filter $filter }}
-  <meta property="og:image" content="{{ .RelPermalink }}">
+  <meta property="og:image" content="{{ .Permalink }}">
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+{{- end -}}
+
+{{- $opts := dict
+  "color" "#fff"
+  "font" $font
+  "size" 16
+  "x" 20
+  "y" 188
+}}
+{{- $image := $bg.Process "fill 400x400" }}
+{{- $filter := images.Text .Site.Params.subtitle $opts }}
+{{- with $image | images.Filter $filter }}
+  <!-- What is a standard? Am I right WhatsApp? -->
+  <meta property="og:image" content="{{ .Permalink }}">
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="400" />
 {{- end }}
 {{- /* end of og:image override */ -}}
 

@@ -19,3 +19,8 @@ layouts/partials/head.html: themes/$(THEME_NAME)/layouts/partials/head.html
 # Generate og:image 1px background
 assets/images/og-bg.png:
 	@echo $(ASSET_OG_BG) | base64 -d >$@
+
+# Clean generated images
+.PHONY: clean-gen-images
+clean-gen-images:
+	rm -r resources/_gen/images
