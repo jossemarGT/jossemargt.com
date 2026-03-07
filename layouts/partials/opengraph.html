@@ -40,14 +40,14 @@
 {{- $image := $bg.Process "fill 1200x630" }}
 {{- $font := "" }}
 {{- $path := "https://github.com/google/fonts/raw/main/ofl/kodemono/KodeMono%5Bwght%5D.ttf" }}
-{{- with resources.GetRemote $path }}
+{{- with try (resources.GetRemote $path) }}
   {{- with .Err }}
     {{- errorf "%s" . }}
-  {{- else }}
+  {{- else with .Value }}
     {{- $font = . }}
+  {{- else }}
+    {{- errorf "Unable to get resource %q" $path }}
   {{- end }}
-{{- else }}
-  {{- errorf "Unable to get resource %q" $path }}
 {{- end -}}
 
 {{- $opts := dict

@@ -28,6 +28,9 @@ DefaultContentLanguageInSubdir= true
   enableAutoDarkMode = true
   comments = false
   hideAuthor = true
+  enableOpenGraph = true
+  enableTwitterCards = true
+  description = "# tar -xzf /var/log/thoughts.log.0.gz | tail -f"
 
 #---------------
 # Theme configs
@@ -35,14 +38,6 @@ DefaultContentLanguageInSubdir= true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 enableGitInfo = true
-
-#---------------
-# Social media
-#---------------
-enableOpenGraph = true
-enableTwitterCards = true
-title = "JossemarGT"
-description = "# tail -f /var/log/thoughts.log"
 
 #------------------
 # Fixed menu items
