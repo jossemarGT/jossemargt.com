@@ -21,7 +21,7 @@ DefaultContentLanguageInSubdir= true
   linkedin = "in/jossemargt"
 
 [params]
-  subtitle = "# tar -xzf /var/log/thoughts.log.0.gz"
+  subtitle = "# tar -xzf /var/log/jossemargt/thoughts.0.gz"
   commit = "https://github.com/jossemarGT/jossemargt.com/tree/"
   mainSections = ["post", "posts"]
   dateFormat = "2006-01-02"
@@ -30,7 +30,7 @@ DefaultContentLanguageInSubdir= true
   hideAuthor = true
   enableOpenGraph = true
   enableTwitterCards = true
-  description = "# tar -xzf /var/log/thoughts.log.0.gz | tail -f"
+  description = "# tar -xzf /var/log/jossemargt/thoughts.0.gz | tail -f"
 
 #---------------
 # Theme configs

@@ -1,0 +1,63 @@
+{{- $text := .text | replaceRE "\\s+" " " | strings.TrimSpace -}}
+{{- $maxChars := .maxChars -}}
+{{- $continuation := .continuation | default "" -}}
+{{- $padChars := .padChars | default 0 -}}
+{{- $contLen := len $continuation -}}
+{{- $effectiveMax := sub $maxChars $contLen -}}
+{{- $effectiveMaxPadded := sub $effectiveMax $padChars -}}
+
+{{- $s := newScratch -}}
+{{- $s.Set "lines" slice -}}
+{{- $s.Set "cur" "" -}}
+{{- $s.Set "isFirst" true -}}
+
+{{- if gt (len $text) 0 -}}
+  {{- $words := split $text " " -}}
+
+  {{- range $words -}}
+    {{- $word := . -}}
+    {{- $cur := $s.Get "cur" -}}
+    {{- $isFirst := $s.Get "isFirst" -}}
+    {{- $max := $effectiveMax -}}
+    {{- if not $isFirst -}}
+      {{- $max = $effectiveMaxPadded -}}
+    {{- end -}}
+
+    {{- $testLine := "" -}}
+    {{- if eq (len $cur) 0 -}}
+      {{- $testLine = $word -}}
+    {{- else -}}
+      {{- $testLine = printf "%s %s" $cur $word -}}
+    {{- end -}}
+
+    {{- if gt (len $testLine) $max -}}
+      {{- if gt (len $cur) 0 -}}
+        {{- $s.Add "lines" (slice (printf "%s%s" $cur $continuation)) -}}
+        {{- $s.Set "cur" $word -}}
+        {{- $s.Set "isFirst" false -}}
+      {{- else -}}
+        {{- $s.Add "lines" (slice (printf "%s%s" $word $continuation)) -}}
+        {{- $s.Set "cur" "" -}}
+        {{- $s.Set "isFirst" false -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $s.Set "cur" $testLine -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $cur := $s.Get "cur" -}}
+  {{- if gt (len $cur) 0 -}}
+    {{- $s.Add "lines" (slice $cur) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $lines := $s.Get "lines" -}}
+{{- $firstLine := "" -}}
+{{- $rest := "" -}}
+{{- $lineCount := len $lines -}}
+{{- if gt $lineCount 0 -}}
+  {{- $firstLine = index $lines 0 -}}
+  {{- $rest = delimit (after 1 $lines) "\n" -}}
+{{- end -}}
+
+{{- return (dict "firstLine" $firstLine "rest" $rest "lineCount" $lineCount) -}}
