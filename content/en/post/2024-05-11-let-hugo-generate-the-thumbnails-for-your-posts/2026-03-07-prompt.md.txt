@@ -1,0 +1,37 @@
+Create a Hugo word-wrap helper partial at
+`layouts/partials/helpers/terminal-wordwrap.html` that breaks text at word
+boundaries with shell-style continuation support.
+
+This will used by `images.Text` to generate open graph thumbnails at hugo site
+build time, simulating a shell-prompt + output.
+
+## Requirements
+
+- The partial receives a dict with:
+  - text (string) — the text to wrap
+  - maxChars (int) — max characters per line
+  - continuation (string, optional) — suffix appended to broken lines (e.g., \
+    for shell line continuation)
+  - padChars (int, optional) — number of characters to reserve for visual
+    indentation on continuation lines (the indent itself is applied externally
+    via pixel offset, since Hugo's `images.Text` strips leading whitespace)
+- Returns a dict with:
+  - firstLine (string) — the first line of wrapped text (including continuation
+    suffix if it overflows)
+  - rest (string) — remaining lines joined with \n (without padding — padding is
+    handled by the caller at the pixel level)
+  - lineCount (int) — total number of lines
+
+## Key implementation detail
+
+Use newScratch (Hugo's `collections.NewScratch`) with Set/Get/Add methods to
+work around Go template variable scoping — variables reassigned inside range
+blocks don't persist across iterations without a scratch pad.
+
+### Why first line is returned separately
+
+Hugo's `images.Text` filter uses strings.FieldsSeq (discards whitespace tokens)
+and strings.TrimSpace on each line before rendering, making space-based
+indentation impossible. The caller must render continuation lines as a separate
+`images.Text` filter with an increased pixel x offset to achieve visual
+indentation.
